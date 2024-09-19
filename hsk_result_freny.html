@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: black;
+        }
+        .header h2 {
+            margin: 0;
+            font-size: 20px;
+            color: black;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .content img {
+            width: 120px;
+            height: auto;
+            border-radius: 50%;
+            border: 2px solid black;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .text-section {
+            width: 100%;
+            padding: 20px;
+            position: relative;
+        }
+        .text-section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .text-section th, .text-section td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .text-section th {
+            background-color: #f4f4f4;
+        }
+        .text-section td {
+            background-color: #fafafa;
+        }
+        .text-section tr:nth-child(even) td {
+            background-color: #f9f9f9;
+        }
+        .text-section .header-row {
+            text-align: center;
+        }
+        .image-cell {
+            text-align: right;
+            vertical-align: top;
+            padding: 10px;
+            position: relative;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: grey;
+        }
+        .randomize {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>中文考试成绩在线验证结果查询</h1>
+            <h2>汉考国际教育科技（北京）有限公司（CTI）</h2>
+        </div>
+        <div class="content">
+            <div class="text-section">
+                <table>
+                    <tr class="header-row">
+                        <th colspan="2">Information of Test Taker</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="position: relative;">
+                            <img src="data:image/jpeg;base64,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" alt="Test Taker Image">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name on Certificate:</td>
+                        <td>FRENY THAKRAL</td>
+                    </tr>
+                    <tr>
+                        <td>Chinese Name:</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Nationality:</td>
+                        <td>印度</td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td>女</td>
+                    </tr>
+                    <tr>
+                        <td>Passport Number:</td>
+                        <td>R6464054</td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr class="header-row">
+                        <th colspan="2">考试信息</th>
+                    </tr>
+                    <tr>
+                        <td>考点名称:</td>
+                        <td>Test Center from India</td>
+                    </tr>
+                    <tr>
+                        <td>Ticket No.:</td>
+                        <td>H42209814010000009</td>
+                    </tr>
+                    <tr>
+                        <td>证书编号:</td>
+                        <td>H4221003549</td>
+                    </tr>
+                    <tr>
+                        <td>Test Type:</td>
+                        <td>HSK四级</td>
+                    </tr>
+                    <tr>
+                        <td>Test Time:</td>
+                        <td>16-Oct-2022</td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr class="header-row">
+                        <th colspan="5">HSK四级(16-Oct-2022)中文水平考试</th>
+                    </tr>
+                    <tr>
+                        <td>听力</td>
+                        <td>阅读</td>
+                        <td>写作</td>
+                        <td>Total Score</td>
+                        <td>Status</td>
+                    </tr>
+                    <tr>
+                        <td>91</td>
+                        <td>93</td>
+                        <td>88</td>
+                        <td>272</td>
+                        <td>合格</td>
+                    </tr>
+                </table>
+                <div class="footer">最终解释权归汉考国际所有</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
